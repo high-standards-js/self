@@ -1,0 +1,44 @@
+{
+  "name": "@high-standards-js/self",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "postinstall": "node src/postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/high-standards-js/self.git"
+  },
+  "author": "Oliver Lorenz <mail@oliverlorenz.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/high-standards-js/self/issues"
+  },
+  "homepage": "https://github.com/high-standards-js/self#readme",
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "8.0.1",
+    "@semantic-release/release-notes-generator": "9.0.1",
+    "git-authors-cli": "1.0.27",
+    "commitlint": "8.3.5",
+    "@commitlint/config-conventional": "8.3.4"
+  },
+  "dependencies": {
+    "@high-standards-js/git-contributors": "^1.0.3",
+    "@high-standards-js/github-action-release-node": "^1.0.1",
+    "@high-standards-js/github-action-release-semantic-release": "^1.0.2",
+    "@high-standards-js/prettier": "^1.0.0",
+    "@high-standards-js/semantic-release-github": "^1.0.5",
+    "@high-standards-js/semantic-release-npm": "^1.0.1",
+    "husky": "4.2.5"
+  },
+  "engines": {
+    "node": ">=12.16.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "git-authors-cli",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
