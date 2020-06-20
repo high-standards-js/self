@@ -16,13 +16,13 @@
   },
   "homepage": "https://github.com/high-standards-js/self#readme",
   "dependencies": {
-    "@high-standards-js/commitlint": "^1.0.3",
-    "@high-standards-js/git-contributors": "^1.0.3",
-    "@high-standards-js/github-action-release-node": "^1.0.1",
-    "@high-standards-js/github-action-release-semantic-release": "^1.0.2",
-    "@high-standards-js/prettier": "^1.0.1",
-    "@high-standards-js/semantic-release-github": "^1.0.5",
-    "@high-standards-js/semantic-release-npm": "^1.0.1",
+    "@high-standards-js/commitlint": "^1.0.4",
+    "@high-standards-js/git-contributors": "^1.0.4",
+    "@high-standards-js/github-action-release-node": "^1.0.2",
+    "@high-standards-js/github-action-release-semantic-release": "^1.0.3",
+    "@high-standards-js/prettier": "^1.0.3",
+    "@high-standards-js/semantic-release-github": "^1.0.6",
+    "@high-standards-js/semantic-release-npm": "^1.0.2",
     "husky": "4.2.5"
   },
   "devDependencies": {
@@ -40,7 +40,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "lint-staged && git-authors-cli",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
