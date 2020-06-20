@@ -16,12 +16,14 @@
   },
   "homepage": "https://github.com/high-standards-js/self#readme",
   "dependencies": {
+    "@high-standards-js/commitlint": "^1.0.3",
     "@high-standards-js/git-contributors": "^1.0.3",
     "@high-standards-js/github-action-release-node": "^1.0.1",
     "@high-standards-js/github-action-release-semantic-release": "^1.0.2",
-    "@high-standards-js/prettier": "^1.0.0",
+    "@high-standards-js/prettier": "^1.0.1",
     "@high-standards-js/semantic-release-github": "^1.0.5",
-    "@high-standards-js/semantic-release-npm": "^1.0.1"
+    "@high-standards-js/semantic-release-npm": "^1.0.1",
+    "husky": "4.2.5"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "8.0.1",
@@ -29,18 +31,26 @@
     "git-authors-cli": "1.0.27",
     "commitlint": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
-    "husky": "4.2.5"
+    "husky": "4.2.5",
+    "lint-staged": "10.2.11",
+    "prettier": "2.0.5"
   },
   "engines": {
     "node": ">=12.16.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "git-authors-cli",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "contributors": [
     "Oliver Lorenz <mail@oliverlorenz.com>"
-  ]
+  ],
+  "lint-staged": {
+    "*.{ts,js,json,css,yaml}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }
