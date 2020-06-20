@@ -40,5 +40,8 @@
       "pre-commit": "git-authors-cli",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  }
+  },
+  "contributors": [
+    "Oliver Lorenz <mail@oliverlorenz.com>"
+  ]
 }
