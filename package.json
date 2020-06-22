@@ -16,11 +16,11 @@
   },
   "homepage": "https://github.com/high-standards-js/self#readme",
   "dependencies": {
-    "@high-standards-js/commitlint": "^1.0.7",
+    "@high-standards-js/commitlint": "^1.0.8",
     "@high-standards-js/git-contributors": "^1.0.5",
     "@high-standards-js/github-action-release-node": "^1.0.3",
     "@high-standards-js/github-action-release-semantic-release": "^1.0.4",
-    "@high-standards-js/prettier": "^1.0.5",
+    "@high-standards-js/prettier": "^1.0.6",
     "@high-standards-js/semantic-release-github": "^1.0.7",
     "@high-standards-js/semantic-release-npm": "^1.0.3"
   },
